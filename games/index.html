@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games - Magic Upgrades</title>
+  <link rel="icon" href="/files/data/favicon/favicon.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      background-image: url('/files/data/backgrounds/games-background.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: rgba(0, 0, 0, 0.5);
+      font-size: 24px;
+      z-index: 2;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    nav img {
+      height: 50px;
+      width: 50px;
+      vertical-align: middle;
+    }
+
+    .games-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding-top: 80px; /* Space for navbar */
+      margin: 20px;
+    }
+
+    .game {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .game:hover {
+      background-color: rgba(128, 128, 128, 0.5);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+    }
+
+    .game img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .game h3, .game p {
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .play-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background: linear-gradient(45deg, #ff7300, #ffb900, #ff7300);
+      background-size: 200% auto;
+      animation: gradient-animation 4s ease infinite;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration:none;
+      underline: none;
+    }
+
+    @keyframes gradient-animation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="/" title="Home">
+    <img src="/files/data/favicon/favicon.png" alt="Home">
+  </a>
+  <a href="/pricing/" title="Pricing">Pricing</a>
+  <a href="/info/" title="Info">Info/About</a>
+  <a href="/game-list/" title="Game List">Game List</a>
+  <a href="/games/" title="Games">Games</a>
+  <a href="/movies/" title="Movies">Movies</a>
+  <a href="/music/" title="Music">Music</a>
+</nav>
+
+<div class="games-container">
+  <!-- Example for 1000 games, replicate this structure for all the games -->
+  <!-- Replace placeholders with actual game information -->
+  <!-- You can dynamically generate this HTML using a server-side language or JavaScript -->
+  <!-- For demonstration purposes, I'll only include a few games -->
+
+  <!-- Game 1 -->
+  <div class="game">
+    <img src="/files/data/game-images/SlqdwsCpWpuiRRNW42D1iJhbQslm9CTbLZS0HuFxyuOvAYiCrZ.jpeg" alt="Game 1">
+    <h3>Lemon Squisher</h3>
+    <p>Squish and Punch Lemons!</p>
+    <a href="/games/lemon-squisher/">
+      <button class="play-button">Play Now!</button>
+    </a>
+  </div>
+
+  <!-- Game 2 -->
+  <div class="game">
+    <img src="/files/data/game-images/lxHLVCPROaSTRM1mftZdzPMBNEs7yRNl5fHFNMtrAnXooWLxfW.jpeg" alt="Game 2">
+    <h3>Boxing</h3>
+    <p>Punch the bag.</p>
+    <a href="/games/boxing/">
+      <button class="play-button">Play Now!</button>
+    </a>
+  </div>
+
+  <!-- Game 3 -->
+  <div class="game">
+    <img src="/files/data/game-images/Fv40wepTMiUDI5NQzpbczXV786FR59NEM1IleLVrIWAwZJvV2w.jpeg" alt="Game 3">
+    <h3>Balloon Shooter</h3>
+    <p>Throw the balloon at the enemies.</p>
+    <a href="/games/balloon-shooter/">
+      <button class="play-button">Play Now!</button>
+    </a>
+  </div>
+
+  <!-- Game 4 -->
+  <div class="game">
+    <img src="/files/data/game-images/3mbSjTaMuSQXuj7xFWJjUdqFzAc3Cpajl5KAEnzeYqEiMLeRj5.jpeg" alt="Game 4">
+    <h3>2048 - Merger</h3>
+    <p>Merge till you get 2048!!!</p>
+    <a href="/games/2048-merger/">
+      <button class="play-button">Play Now!</button>
+    </a>
+  </div>
+
+  <!-- Continue this pattern for all 1000 games -->
+</div>
+
+</body>
+</html>

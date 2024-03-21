@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Color Video</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          background: black;
+        }
+
+        .container {
+          position: relative;
+          font-size: 4em;
+          color: transparent;
+          animation: text-color 5s infinite alternate;
+          background: url('/text-video.mp4') no-repeat center center/cover;
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+
+        @keyframes text-color {
+          0% { color: #ff0000; } /* Red */
+          25% { color: #00ff00; } /* Green */
+          50% { color: #0000ff; } /* Blue */
+          75% { color: #ffff00; } /* Yellow */
+          100% { color: #ff00ff; } /* Magenta */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    The greatest Power
+</div>
+</body>
+</html>

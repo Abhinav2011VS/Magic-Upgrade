@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemon Squisher</title>
+    <link rel="icon" href="/files/data/favicon/favicon.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 24px;
+            z-index: 2;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav img {
+            height: 50px;
+            width: 50px;
+            vertical-align: middle;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .game-box {
+            background-image: url('/files/data/game-images/SlqdwsCpWpuiRRNW42D1iJhbQslm9CTbLZS0HuFxyuOvAYiCrZ.jpeg');
+            background-size: cover;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            height: 400px;
+            transition: transform 1s ease; /* Add transition for smooth movement */
+        }
+
+        .game-box.left {
+            transform: translateX(-100%);
+        }
+
+        .game-box.right {
+            transform: translateX(100%);
+        }
+
+        .main-game-box {
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            height: 500px;
+        }
+
+        .game-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .play-button {
+            font-size: 24px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .play-button:hover {
+            background-color: #0056b3;
+        }
+
+        .description {
+            margin-top: 40px;
+            font-size: 20px;
+            line-height: 1.6;
+            text-align: left;
+        }
+        #game-container {
+            margin-top: 200px;
+            text-align: center; /* Center contents horizontally */
+        }
+        #lemon {
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .lemon-size {
+            width: 100px; /* Double the original width */
+            height: 100px; /* Double the original height */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #scoreboard {
+            margin-top: 20px;
+            font-size: 24px;
+            text-align: center; /* Center text horizontally */
+        }
+        #buy-buttons {
+            margin-top: 20px;
+            text-align: center; /* Center buttons horizontally */
+        }
+        #sub-buy-button,
+        #sub-buy-button2 {
+            padding: 20px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: linear-gradient(45deg, #0cd206, #e3b63f, #0058ff);
+            background-size: 200% auto;
+            animation: gradient-animation 4s ease infinite;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            display: inline-block;
+            width: 45%; /* Adjust width as needed */
+            text-align: center;
+            text-decoration:none;
+            underline: none;
+            margin-left: 10px; /* Adjust margin as needed */
+            margin-right: 10px; /* Adjust margin as needed */
+        }
+        #sub-buy-button:hover {
+            background: linear-gradient(195deg, #0cd206, #e3b63f, #0058ff);
+        }
+        #sub-buy-button2:hover {
+            background: linear-gradient(-195deg, #0cd206, #e3b63f, #0058ff);
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="/" title="Home">
+        <img src="/files/data/favicon/favicon.png" alt="Home">
+    </a>
+    <a href="/pricing/" title="Pricing">Pricing</a>
+    <a href="/info/" title="Info">Info/About</a>
+    <a href="/game-list/" title="Game List">Game List</a>
+    <a href="/games/" title="Games">Games</a>
+    <a href="/movies/" title="Movies">Movies</a>
+    <a href="/music/" title="Music">Music</a>
+</nav><p>        </p>
+<br>
+
+<div class="container">
+    <h1>Lemon Squisher</h1>
+
+    <div class="game-box">
+        <h2 class="game-title">Lemon Squisher</h2>
+        <button class="play-button" onclick="showGame()">Play Now!</button>
+    </div>
+    <div class="main-game-box" id="game-container" style="display: none;">
+        <img id="lemon" src="/files/data/game-images/lemon-squisher/3dtcXDma7640qFXSImyWAot2tVezt5Y2bIzXFsViXTsY5ZLikD.png" alt="Lemon">
+        <div id="scoreboard">Points: <span id="points">0</span></div>
+        <div id="buy-buttons">
+            <button id="sub-buy-button" onclick="buySpeed()">Buy Speed</button>
+            <button id="sub-buy-button2" onclick="buyPower()">Buy Power</button>
+        </div>
+    </div>
+    <div class="description">
+        <h2>Description</h2>
+        <p>.................................
+            <br>................................
+            <br>................................</p>
+        <h2>Controls</h2>
+        <p>................................</p>
+    </div>
+</div>
+<script>
+    function showGame() {
+        // Move game-box to the left
+        var gameBox = document.querySelector('.game-box');
+        gameBox.classList.add('left');
+
+        // Hide game-box after a delay
+        setTimeout(function() {
+            gameBox.style.display = 'none';
+        }, 1000); // Adjust this delay to match the transition duration
+
+        // Show game-container after a delay
+        var gameContainer = document.getElementById('game-container');
+        setTimeout(function() {
+            gameContainer.style.display = 'block';
+        }, 1000); // Adjust this delay to match the transition duration
+    }
+</script>
+</body>
+</html>

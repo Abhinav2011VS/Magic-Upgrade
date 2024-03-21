@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Magic Upgrades</title>
+    <link rel="icon" href="/files/data/favicon/favicon.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            background-image: url('/files/data/backgrounds/pricing-background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 24px;
+            z-index: 2;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav img {
+            height: 50px;
+            width: 50px;
+            vertical-align: middle;
+        }
+
+        .pricing-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-top: 80px; /* Space for navbar */
+        }
+
+        .product {
+            position: relative; /* Make the product box a reference for positioning */
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px;
+            width: calc(50% - 40px); /* Adjust based on margin and padding */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            background-color: rgba(128, 128, 128, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+        }
+
+        .product h3, .product p {
+            margin: 10px 0;
+        }
+
+        .price-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .price-button:hover {
+            font-size: 16px;
+            color: #fff;
+            background-color: #005abd;
+            border: none;
+            border-radius: 300px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="/" title="Home">
+        <img src="/files/data/favicon/favicon.png" alt="Home">
+    </a>
+    <a href="/pricing/" title="Pricing">Pricing</a>
+    <a href="/info/" title="Info">Info/About</a>
+    <a href="/game-list/" title="Game List">Game List</a>
+    <a href="/games/" title="Games">Games</a>
+    <a href="/movies/" title="Movies">Movies</a>
+    <a href="/music/" title="Music">Music</a>
+</nav>
+
+<div class="pricing-container">
+    <!-- Example for 4 products, replicate this structure for 50 products in total -->
+    <div class="product">
+        <h3>Level 1</h3>
+        <p>Adds 1 Low Quality Game</p>
+        <a href="/products/lils-smart-top/level-1/">
+            <button class="price-button"><b>₹1</b></button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>Level 2</h3>
+        <p>Adds 1 Mid-Quality Game</p>
+        <a href="/products/lils-smart-top/level-2/">
+            <button class="price-button"><b>₹2</b></button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>Level 3</h3>
+        <p>Adds 1 High Quality Game</p>
+        <a href="/products/lils-smart-top/level-3/">
+            <button class="price-button"><b>₹5</b></button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>Level 4</h3>
+        <p>Adds 2 High Quality Game</p>
+        <a href="/products/lils-smart-top/level-4/">
+            <button class="price-button"><b>₹10</b></button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>Level 5</h3>
+        <p>Adds 4 High Quality Games</p>
+        <a href="/products/lils-smart-top/level-5/">
+            <button class="price-button"><b>₹20</b></button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>Level 6</h3>
+        <p>Adds 6 High Quality Games</p>
+        <p>Better Speakers</p>
+        <p>Better/More Sounds</p>
+        <a href="/products/lils-smart-top/level-6/">
+            <button class="price-button"><b>₹50</b></button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>Level 7</h3>
+        <p>Adds 20 High Quality Games</p>
+        <p>Keyboard Color (Custom)</p>
+        <p>Better Speaker</p>
+        <p>Harry Potter 1 Full Movie</p>
+        <a href="/products/lils-smart-top/level-7/">
+            <button class="price-button"><b>₹100</b></button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>Level 8</h3>
+        <p>Adds 50 High Quality Games</p>
+        <p>Keyboard Color (Custom)</p>
+        <p>Better Speaker</p>
+        <p>Harry Potter All Full Movies</p>
+        <a href="/products/lils-smart-top/level-8/">
+            <button class="price-button"><b>₹200</b></button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>Level 9</h3>
+        <p>Adds 150 Mid & High Quality Games</p>
+        <p>Keyboard Color (Custom)</p>
+        <p>Better Speaker</p>
+        <p>100 Full Movies</p>
+        <a href="/products/lils-smart-top/level-9/">
+            <button class="price-button"><b>₹500</b></button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>Level 10</h3>
+        <p>Adds 200 Mid & High Quality Games</p>
+        <p>Keyboard Color (Custom)</p>
+        <p>Better Speaker</p>
+        <p>Harry Potter All Full Movies</p>
+        <p>Upgrade Settings</p>
+        <p>Prime Video</p>
+        <a href="/products/lils-smart-top/level-10/">
+            <button class="price-button"><b>₹1000</b></button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>Level 11</h3>
+        <p>Adds 500 Mid & High Quality Games</p>
+        <p>Keyboard & Mouse Color (Custom)</p>
+        <p>Better Speaker</p>
+        <p>Harry Potter All Full Movies</p>
+        <p>Upgrade Settings</p>
+        <p>Prime Video</p>
+        <p>Better Lighting</p>
+        <p>Better Screen</p>
+        <a href="/products/lils-smart-top/level-11/">
+            <button class="price-button"><b>₹2000</b></button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>Level 12</h3>
+        <p>Adds 800 Mid & High Quality Games</p>
+        <p>Keyboard & Mouse Color (Custom)</p>
+        <p>Better Speaker</p>
+        <p>Harry Potter All Full Movies</p>
+        <p>Upgrade Settings</p>
+        <p>Prime Video</p>
+        <p>Better Lighting</p>
+        <p>Better Screen</p>
+        <p>Better Characters</p>
+        <p>Animations</p>
+        <p>Colourful Pixels</p>
+        <a href="/products/lils-smart-top/level-12/">
+            <button class="price-button"><b>₹5000</b></button>
+        </a>
+    </div>
+    <div class="product">
+        <h3>Level 13</h3>
+        <p>Adds 1000 Mid-Quality Games</p>
+        <p>Adds 1000 High Quality Games</p>
+        <p>Adds 1000 Hyper High Quality Games</p>
+        <p>Adds 1000 Realistic Quality Games</p>
+        <p>Keyboard & Mouse Color (Custom)</p>
+        <p>Better Speaker</p>
+        <p>Harry Potter All Full Movies</p>
+        <p>Upgrade Settings</p>
+        <p>Prime Video</p>
+        <p>Better Lighting</p>
+        <p>Better Screen</p>
+        <p>Better Characters</p>
+        <p>Animations</p>
+        <p>Colourful Pixels</p>
+        <p>Android 15 Or Windows 11</p>
+        <a href="/products/lils-smart-top/level-13/">
+            <button class="price-button"><b>₹10000</b></button>
+        </a>
+    </div>
+</div>
+</body>
+</html>

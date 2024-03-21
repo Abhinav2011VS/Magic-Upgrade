@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Upgrades</title>
+    <link rel="icon" href="/files/data/favicon/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/files/data/css/video-in-text-movies.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: transparent; /* Make text color transparent */
+            overflow: hidden;
+            background-color: black;
+            background-image: url('/files/data/videos/text-video.mp4');
+            background-size: cover;
+            background-position: center;
+        }
+
+        nav {
+            position: fixed; /* Fix the navbar position */
+            top: 0; /* Place it at the top */
+            left: 0;
+            width: 100%; /* Make it full width */
+            height: 60px; /* Set the height */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            font-size: 24px; /* Adjust font size */
+            z-index: 2; /* Ensure it's above intro-container */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px; /* Adjust padding */
+            margin-right: 10px;
+            display: inline-block; /* Ensures padding is respected */
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav img {
+            height: 50px;
+            width: 50px;
+            vertical-align: middle;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .text-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .video-button-container {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3; /* Ensure it's above other elements */
+        }
+
+        .video-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/files/data/videos/button-video-visit.mp4'); /* Background video */
+            background-size: cover;
+            transition: background 0.5s ease;
+        }
+
+        .video-button:hover {
+            background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/files/data/videos/button-video-visit.mp4'); /* Background video on hover */
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="/" title="Home">
+        <img src="/files/data/favicon/favicon.png" alt="Home" width="85" height="85"> <!-- Adjusted size -->
+    </a>
+    <a href="/pricing/" title="Pricing">Pricing</a>
+    <a href="/info/" title="Info">Info/About</a>
+    <a href="/game-list/" title="Game List">Game List</a>
+    <a href="/games/" title="Games">Games</a>
+    <a href="/movies/" title="Movies">Movies</a>
+    <a href="/music/" title="Music">Music</a>
+</nav>
+<div class="container">
+    <video autoplay loop muted>
+        <source src="/files/data/videos/text-video-movies.mp4" type="video/mp4">
+    </video>
+    <div class="text-box">
+        <h1>No Movies Currently Found!</h1>
+    </div>
+</div>
+<div class="video-button-container">
+    <button class="video-button">Sorry!</button>
+</div>
+</body>
+</html>

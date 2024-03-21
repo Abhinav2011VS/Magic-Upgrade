@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemon Squisher</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            background-image: url('/files/data/backgrounds/games-background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 24px;
+            z-index: 2;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav img {
+            height: 50px;
+            width: 50px;
+            vertical-align: middle;
+        }
+        #game-container {
+            margin-top: 200px;
+            text-align: center; /* Center contents horizontally */
+        }
+        #lemon {
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .lemon-size {
+            width: 100px; /* Double the original width */
+            height: 100px; /* Double the original height */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #scoreboard {
+            margin-top: 20px;
+            font-size: 24px;
+            text-align: center; /* Center text horizontally */
+        }
+        #buy-buttons {
+            margin-top: 20px;
+            text-align: center; /* Center buttons horizontally */
+        }
+        #sub-buy-button,
+        #sub-buy-button2 {
+            padding: 20px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: linear-gradient(45deg, #0cd206, #e3b63f, #0058ff);
+            background-size: 200% auto;
+            animation: gradient-animation 4s ease infinite;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            display: inline-block;
+            width: 45%; /* Adjust width as needed */
+            text-align: center;
+            text-decoration:none;
+            underline: none;
+            margin-left: 10px; /* Adjust margin as needed */
+            margin-right: 10px; /* Adjust margin as needed */
+        }
+        #sub-buy-button:hover {
+            background: linear-gradient(195deg, #0cd206, #e3b63f, #0058ff);
+        }
+        #sub-buy-button2:hover {
+            background: linear-gradient(-195deg, #0cd206, #e3b63f, #0058ff);
+        }
+    </style>
+</head>
+<body>
+<div id="game-container">
+    <div class="lemon-size">
+        <img id="lemon" src="/files/data/game-images/lemon-squisher/3dtcXDma7640qFXSImyWAot2tVezt5Y2bIzXFsViXTsY5ZLikD.png" alt="Lemon">
+    </div>
+    <div id="scoreboard">Points: <span id="points">0</span></div>
+    <div id="buy-buttons">
+        <button id="sub-buy-button" onclick="buySpeed()">Buy Speed</button>
+        <button id="sub-buy-button2" onclick="buyPower()">Buy Power</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
